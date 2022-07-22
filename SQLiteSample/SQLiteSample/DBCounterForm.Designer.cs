@@ -1,6 +1,6 @@
 ﻿namespace SQLiteSample
 {
-    partial class DBCounter
+    partial class DBCounterForm
     {
         /// <summary>
         ///  Required designer variable.
