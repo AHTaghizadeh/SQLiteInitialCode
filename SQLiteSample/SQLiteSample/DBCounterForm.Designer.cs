@@ -40,6 +40,7 @@
             this.UpdateDBBt.TabIndex = 0;
             this.UpdateDBBt.Text = "Update Database";
             this.UpdateDBBt.UseVisualStyleBackColor = true;
+            this.UpdateDBBt.Click += new System.EventHandler(this.UpdateDBBt_Click);
             // 
             // CountLb
             // 
@@ -50,14 +51,14 @@
             this.CountLb.TabIndex = 1;
             this.CountLb.Text = "Count: 0";
             // 
-            // DBCounter
+            // DBCounterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 214);
             this.Controls.Add(this.CountLb);
             this.Controls.Add(this.UpdateDBBt);
-            this.Name = "DBCounter";
+            this.Name = "DBCounterForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
