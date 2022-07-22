@@ -21,7 +21,7 @@ namespace SQLiteSample.Data
         }
 
         public virtual DbSet<CounterManager> CounterManager { get; set; } = null!;
-        public virtual DbSet<CounterStamp> CountStamp { get; set; } = null!;
+        // public virtual DbSet<CounterStamp> CountStamp { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

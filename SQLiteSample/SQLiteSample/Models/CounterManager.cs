@@ -9,7 +9,7 @@ namespace SQLiteSample.Models
     internal class CounterManager
     {
         public int Id { get; set; }
-        int totalCount;
-        ICollection<CounterStamp> counterStamps = null!;
+        public int totalCount;
+        // public ICollection<CounterStamp> counterStamps = null!;
     }
 }
