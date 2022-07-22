@@ -11,32 +11,45 @@ namespace SQLiteSample
     internal class CounterManagerLogic
     {
         private int latestCount;
+        CounterManagerContext cmc;
         public CounterManagerLogic()
         {
-            using CounterManagerContext cmc = new CounterManagerContext();
-            var cm = cmc.CounterManager.FirstOrDefault();
+            CounterManagerContext cmc = new CounterManagerContext();
+            var cm = cmc.CounterManager;
             if(cm == null)
             {
                 // there is nothing here. Create one.
                 var ncm = new CounterManager();
                 ncm.Id = 1;
-                ncm.totalCount = 1;
+                ncm.totalCount = 10;
                 // ncm.counterStamps = new List<CounterStamp>();
-                CounterStamp cs = new CounterStamp();
-                cs.Id = 1;
-                cs.randomDate = "Something";
-                cs.creationTime = DateTime.Now;
+                // CounterStamp cs = new CounterStamp();
+                // cs.Id = 1;
+                // cs.randomDate = "Something";
+                // cs.creationTime = DateTime.Now;
                 // cmc.CountStamp.Add(cs);
                 // ncm.counterStamps.Add(cs);
                 cmc.CounterManager.Add(ncm);
-                cmc.SaveChanges();
+                cmc.SaveChangesAsync();
             }
-
-            latestCount = 0;
+            else
+            {
+                var ncm = new CounterManager();
+                ncm.Id = 1;
+                ncm.totalCount = 10;
+                // ncm.counterStamps = new List<CounterStamp>();
+                // CounterStamp cs = new CounterStamp();
+                // cs.Id = 1;
+                // cs.randomDate = "Something";
+                // cs.creationTime = DateTime.Now;
+                // cmc.CountStamp.Add(cs);
+                // ncm.counterStamps.Add(cs);
+                cmc.CounterManager.Add(ncm);
+                cmc.SaveChangesAsync();
+            }
         }
         public int GetTotalCount()
         {
-            using CounterManagerContext cmc = new CounterManagerContext();
             var cm = cmc.CounterManager.Where(p => true).FirstOrDefault();
             if(cm is CounterManager)
             {
@@ -45,16 +58,15 @@ namespace SQLiteSample
 
             return latestCount;
         }
-        public void IncreaseCount(int x)
+        public async Task IncreaseCountAsync(int x)
         {
-
-            using CounterManagerContext cmc = new CounterManagerContext();
             var cm = cmc.CounterManager.Where(p => true).FirstOrDefault();
             if(cm is CounterManager)
             {
                 cm.totalCount=cm.totalCount + x;
             }
-            cmc.SaveChanges();
+            await cmc.SaveChangesAsync();
+            var its = cmc.CounterManager;
             return;
         }
     }

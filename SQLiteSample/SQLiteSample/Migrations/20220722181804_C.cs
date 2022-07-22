@@ -4,7 +4,7 @@
 
 namespace SQLiteSample.Migrations
 {
-    public partial class CreateDB : Migration
+    public partial class C : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,27 +19,12 @@ namespace SQLiteSample.Migrations
                 {
                     table.PrimaryKey("PK_CounterManager", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "CountStamp",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CountStamp", x => x.Id);
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "CounterManager");
-
-            migrationBuilder.DropTable(
-                name: "CountStamp");
         }
     }
 }

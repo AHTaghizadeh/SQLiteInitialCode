@@ -26,17 +26,6 @@ namespace SQLiteSample.Migrations
 
                     b.ToTable("CounterManager");
                 });
-
-            modelBuilder.Entity("SQLiteSample.Models.CounterStamp", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CountStamp");
-                });
 #pragma warning restore 612, 618
         }
     }

@@ -11,7 +11,7 @@ namespace SQLiteSample
 
         private void UpdateDBBt_Click(object sender, EventArgs e)
         {
-            cml.IncreaseCount(1);
+            cml.IncreaseCountAsync(1);
             CountLb.Text = $"Count: {cml.GetTotalCount()}";
         }
     }

@@ -10,8 +10,8 @@ using SQLiteSample.Data;
 namespace SQLiteSample.Migrations
 {
     [DbContext(typeof(CounterManagerContext))]
-    [Migration("20220722174138_CreateDB")]
-    partial class CreateDB
+    [Migration("20220722181804_C")]
+    partial class C
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,17 +27,6 @@ namespace SQLiteSample.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CounterManager");
-                });
-
-            modelBuilder.Entity("SQLiteSample.Models.CounterStamp", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CountStamp");
                 });
 #pragma warning restore 612, 618
         }
