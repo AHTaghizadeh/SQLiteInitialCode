@@ -1,8 +1,8 @@
 namespace SQLiteSample
 {
-    public partial class Form1 : Form
+    public partial class DBCounter : Form
     {
-        public Form1()
+        public DBCounter()
         {
             InitializeComponent();
         }
