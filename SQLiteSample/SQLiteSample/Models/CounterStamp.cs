@@ -8,7 +8,8 @@ namespace SQLiteSample.Models
 {
     internal class CounterStamp
     {
-        string randomDate = "";
-        DateTime creationTime;
+        public int Id { get; set; }
+        string randomDate = null!;
+        DateTime creationTime = DateTime.Now;
     }
 }

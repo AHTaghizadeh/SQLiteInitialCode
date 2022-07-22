@@ -8,7 +8,8 @@ namespace SQLiteSample.Models
 {
     internal class CounterManager
     {
+        public int Id { get; set; }
         int totalCount;
-        CounterStamp? lastCounterStamp;
+        ICollection<CounterStamp> counterStamps = null!;
     }
 }
