@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace SQLiteSample.Models
 {
-    internal class CounterStamp
+    internal class RandomData
     {
-        public int Id { get; set; }
-        public string randomDate = null!;
-        public DateTime creationTime = DateTime.Now;
+        public DateTime creationTime;
+        public int randomData;
     }
 }

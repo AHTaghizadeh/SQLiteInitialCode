@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UpdateDBBt = new System.Windows.Forms.Button();
+            this.RandomBt = new System.Windows.Forms.Button();
             this.CountLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // UpdateDBBt
+            // RandomBt
             // 
-            this.UpdateDBBt.Location = new System.Drawing.Point(146, 124);
-            this.UpdateDBBt.Name = "UpdateDBBt";
-            this.UpdateDBBt.Size = new System.Drawing.Size(417, 34);
-            this.UpdateDBBt.TabIndex = 0;
-            this.UpdateDBBt.Text = "Update Database";
-            this.UpdateDBBt.UseVisualStyleBackColor = true;
-            this.UpdateDBBt.Click += new System.EventHandler(this.UpdateDBBt_Click);
+            this.RandomBt.Location = new System.Drawing.Point(23, 64);
+            this.RandomBt.Name = "RandomBt";
+            this.RandomBt.Size = new System.Drawing.Size(417, 34);
+            this.RandomBt.TabIndex = 0;
+            this.RandomBt.Text = "Create Random";
+            this.RandomBt.UseVisualStyleBackColor = true;
+            this.RandomBt.Click += new System.EventHandler(this.UpdateDBBt_Click);
             // 
             // CountLb
             // 
             this.CountLb.AutoSize = true;
-            this.CountLb.Location = new System.Drawing.Point(303, 79);
+            this.CountLb.Location = new System.Drawing.Point(23, 25);
             this.CountLb.Name = "CountLb";
             this.CountLb.Size = new System.Drawing.Size(79, 25);
             this.CountLb.TabIndex = 1;
@@ -55,9 +55,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 214);
+            this.ClientSize = new System.Drawing.Size(446, 119);
             this.Controls.Add(this.CountLb);
-            this.Controls.Add(this.UpdateDBBt);
+            this.Controls.Add(this.RandomBt);
             this.Name = "DBCounterForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -67,7 +67,7 @@
 
         #endregion
 
-        private Button UpdateDBBt;
+        private Button RandomBt;
         private Label CountLb;
     }
 }
