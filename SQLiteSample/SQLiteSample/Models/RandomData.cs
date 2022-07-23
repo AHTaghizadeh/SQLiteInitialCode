@@ -9,7 +9,7 @@ namespace SQLiteSample.Models
     internal class RandomData
     {
         public int Id { get; set; }
-        public DateTime creationTime;
-        public int randomData;
+        public DateTime CreationTime { get; set; } = DateTime.Now;
+        public int TheActualRandomData { get; set; } = 0;
     }
 }

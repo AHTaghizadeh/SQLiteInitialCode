@@ -18,7 +18,7 @@ namespace SQLiteSample.Data
             : base(options)
         {
         }
-        public virtual DbSet<RandomData> CounterManager { get; set; } = null!;
+        public virtual DbSet<RandomData> RandomDatas { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=DB.db");
